@@ -1,0 +1,1451 @@
+{
+    "value0": {
+        "cereal_class_version": 20201222,
+        "project_path": "C:\\Users\\gacp_\\Downloads\\arcade_game_krilloud_variables\\arcade_game_krilloud",
+        "game_path": "C:\\Users\\gacp_\\Downloads\\arcade_game_krilloud_variables",
+        "project_name": "arcade_game_krilloud",
+        "tags": [
+            {
+                "cereal_class_version": 20191030,
+                "tagname": "musica",
+                "is3Dtag": false,
+                "Min3DDistance": 1.0,
+                "Max3DDistance": 2.0,
+                "roll_off_factor": 1.0,
+                "attenuationType": 0,
+                "distance_delay": false,
+                "doppler_active": false,
+                "doppler_factor": 0.0,
+                "isLoopable": true,
+                "channel_id": 0,
+                "levelName": "Root",
+                "associated_ID": -1,
+                "gids": 6,
+                "graphNodes_info": [
+                    {
+                        "cereal_class_version": 20201222,
+                        "type": 18,
+                        "ID": 0,
+                        "Name": "Output",
+                        "Pos_x": 651.2000732421875,
+                        "Pos_y": -78.39999389648438,
+                        "Size_x": 100.0,
+                        "Size_y": 50.0,
+                        "can_be_deleted": false,
+                        "inputsCount": 1,
+                        "outputsCount": 0,
+                        "sockets": [
+                            {
+                                "cereal_class_version": 20191030,
+                                "SocketID": 0,
+                                "connection_type": 0,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "cereal_class_version": 20191030,
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 2,
+                                        "connected_node_socket_id": 1
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": []
+                    },
+                    {
+                        "type": 1,
+                        "ID": 1,
+                        "Name": "musica",
+                        "Pos_x": -236.3999786376953,
+                        "Pos_y": -111.79998016357422,
+                        "Size_x": 200.0,
+                        "Size_y": 100.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 0,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 1,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 2,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": [
+                            0.0,
+                            0.0,
+                            14603.0,
+                            0.4000000059604645
+                        ]
+                    },
+                    {
+                        "type": 13,
+                        "ID": 2,
+                        "Name": "Pitch",
+                        "Pos_x": 126.82565307617188,
+                        "Pos_y": -31.6525821685791,
+                        "Size_x": 250.0,
+                        "Size_y": 100.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 2,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 0,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 1,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "SocketID": 1,
+                                "connection_type": 1,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 1,
+                                        "connected_node_id": 0,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "SocketID": 2,
+                                "connection_type": 0,
+                                "data_type": 1,
+                                "links": [
+                                    {
+                                        "my_socket_id": 2,
+                                        "connected_node_id": 3,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": [
+                            0.0
+                        ]
+                    },
+                    {
+                        "type": 16,
+                        "ID": 3,
+                        "Name": "music_pitch",
+                        "Pos_x": -87.19139862060547,
+                        "Pos_y": -273.76568603515627,
+                        "Size_x": 175.0,
+                        "Size_y": 110.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 0,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 1,
+                                "data_type": 1,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 2,
+                                        "connected_node_socket_id": 2
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": [
+                            0.0,
+                            2.0,
+                            1.0,
+                            0.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "type": 22,
+                        "ID": 6,
+                        "Name": "Mixer",
+                        "Pos_x": 555.9832153320313,
+                        "Pos_y": -230.32691955566407,
+                        "Size_x": 200.0,
+                        "Size_y": 120.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 4,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 1,
+                                "data_type": 0,
+                                "links": []
+                            },
+                            {
+                                "SocketID": 1,
+                                "connection_type": 0,
+                                "data_type": 1,
+                                "links": []
+                            },
+                            {
+                                "SocketID": 2,
+                                "connection_type": 0,
+                                "data_type": 0,
+                                "links": []
+                            },
+                            {
+                                "SocketID": 3,
+                                "connection_type": 0,
+                                "data_type": 1,
+                                "links": []
+                            },
+                            {
+                                "SocketID": 4,
+                                "connection_type": 0,
+                                "data_type": 0,
+                                "links": []
+                            }
+                        ],
+                        "values": [
+                            1.0,
+                            1.0
+                        ]
+                    }
+                ],
+                "graphLevels_info": []
+            },
+            {
+                "tagname": "ui",
+                "is3Dtag": false,
+                "Min3DDistance": 1.0,
+                "Max3DDistance": 2.0,
+                "roll_off_factor": 1.0,
+                "attenuationType": 0,
+                "distance_delay": false,
+                "doppler_active": false,
+                "doppler_factor": 0.0,
+                "isLoopable": false,
+                "channel_id": 0,
+                "levelName": "Root",
+                "associated_ID": -1,
+                "gids": 8,
+                "graphNodes_info": [
+                    {
+                        "type": 18,
+                        "ID": 0,
+                        "Name": "Output",
+                        "Pos_x": 302.90008544921877,
+                        "Pos_y": -167.0999755859375,
+                        "Size_x": 100.0,
+                        "Size_y": 50.0,
+                        "can_be_deleted": false,
+                        "inputsCount": 1,
+                        "outputsCount": 0,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 0,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 6,
+                                        "connected_node_socket_id": 1
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": []
+                    },
+                    {
+                        "type": 1,
+                        "ID": 1,
+                        "Name": "win",
+                        "Pos_x": -384.9998779296875,
+                        "Pos_y": -287.1999816894531,
+                        "Size_x": 200.0,
+                        "Size_y": 100.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 0,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 1,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 6,
+                                        "connected_node_socket_id": 2
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": [
+                            0.0,
+                            0.0,
+                            4217.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "type": 20,
+                        "ID": 6,
+                        "Name": "Selector",
+                        "Pos_x": -16.75006103515625,
+                        "Pos_y": -103.375,
+                        "Size_x": 200.0,
+                        "Size_y": 100.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 3,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 0,
+                                "data_type": 1,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 8,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "SocketID": 3,
+                                "connection_type": 1,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 3,
+                                        "connected_node_id": 0,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "SocketID": 1,
+                                "connection_type": 0,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 1,
+                                        "connected_node_id": 1,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "SocketID": 2,
+                                "connection_type": 0,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 2,
+                                        "connected_node_id": 7,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": []
+                    },
+                    {
+                        "type": 1,
+                        "ID": 7,
+                        "Name": "loose",
+                        "Pos_x": -369.550048828125,
+                        "Pos_y": -124.17498779296875,
+                        "Size_x": 200.0,
+                        "Size_y": 100.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 0,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 1,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 6,
+                                        "connected_node_socket_id": 3
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": [
+                            0.0,
+                            0.0,
+                            4489.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "type": 16,
+                        "ID": 8,
+                        "Name": "win_loose",
+                        "Pos_x": -269.74993896484377,
+                        "Pos_y": -506.5749816894531,
+                        "Size_x": 175.0,
+                        "Size_y": 110.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 0,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 1,
+                                "data_type": 1,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 6,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": [
+                            0.0,
+                            2.0,
+                            1.0,
+                            0.0,
+                            1.0
+                        ]
+                    }
+                ],
+                "graphLevels_info": []
+            },
+            {
+                "tagname": "bugs",
+                "is3Dtag": true,
+                "Min3DDistance": 1.0,
+                "Max3DDistance": 2.0,
+                "roll_off_factor": 1.0,
+                "attenuationType": 0,
+                "distance_delay": false,
+                "doppler_active": false,
+                "doppler_factor": 0.0,
+                "isLoopable": false,
+                "channel_id": 0,
+                "levelName": "Root",
+                "associated_ID": -1,
+                "gids": 4,
+                "graphNodes_info": [
+                    {
+                        "type": 18,
+                        "ID": 0,
+                        "Name": "Output",
+                        "Pos_x": 406.10003662109377,
+                        "Pos_y": -39.899986267089847,
+                        "Size_x": 100.0,
+                        "Size_y": 50.0,
+                        "can_be_deleted": false,
+                        "inputsCount": 1,
+                        "outputsCount": 0,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 0,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 2,
+                                        "connected_node_socket_id": 1
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": []
+                    },
+                    {
+                        "type": 13,
+                        "ID": 2,
+                        "Name": "Pitch",
+                        "Pos_x": 103.60010528564453,
+                        "Pos_y": -46.19999694824219,
+                        "Size_x": 250.0,
+                        "Size_y": 100.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 2,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 0,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 4,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "SocketID": 1,
+                                "connection_type": 1,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 1,
+                                        "connected_node_id": 0,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "SocketID": 2,
+                                "connection_type": 0,
+                                "data_type": 1,
+                                "links": [
+                                    {
+                                        "my_socket_id": 2,
+                                        "connected_node_id": 3,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": [
+                            0.0
+                        ]
+                    },
+                    {
+                        "type": 16,
+                        "ID": 3,
+                        "Name": "pitch_bugs",
+                        "Pos_x": -93.80000305175781,
+                        "Pos_y": -304.6000061035156,
+                        "Size_x": 175.0,
+                        "Size_y": 110.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 0,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 1,
+                                "data_type": 1,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 2,
+                                        "connected_node_socket_id": 2
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": [
+                            0.0,
+                            2.0,
+                            1.0,
+                            0.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "type": 1,
+                        "ID": 4,
+                        "Name": "Audio Container",
+                        "Pos_x": -171.4716033935547,
+                        "Pos_y": -95.30948638916016,
+                        "Size_x": 200.0,
+                        "Size_y": 100.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 0,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 1,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 2,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": [
+                            0.0,
+                            0.0,
+                            11649.0,
+                            1.0
+                        ]
+                    }
+                ],
+                "graphLevels_info": []
+            },
+            {
+                "tagname": "musicaBugs",
+                "is3Dtag": false,
+                "Min3DDistance": 1.0,
+                "Max3DDistance": 2.0,
+                "roll_off_factor": 1.0,
+                "attenuationType": 0,
+                "distance_delay": false,
+                "doppler_active": false,
+                "doppler_factor": 0.0,
+                "isLoopable": true,
+                "channel_id": 1,
+                "levelName": "Root",
+                "associated_ID": -1,
+                "gids": 4,
+                "graphNodes_info": [
+                    {
+                        "type": 18,
+                        "ID": 0,
+                        "Name": "Output",
+                        "Pos_x": 494.10003662109377,
+                        "Pos_y": -46.29998016357422,
+                        "Size_x": 100.0,
+                        "Size_y": 50.0,
+                        "can_be_deleted": false,
+                        "inputsCount": 1,
+                        "outputsCount": 0,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 0,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 4,
+                                        "connected_node_socket_id": 1
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": []
+                    },
+                    {
+                        "type": 1,
+                        "ID": 1,
+                        "Name": "Audio Container",
+                        "Pos_x": -175.5999755859375,
+                        "Pos_y": -45.399986267089847,
+                        "Size_x": 200.0,
+                        "Size_y": 100.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 0,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 1,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 4,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": [
+                            0.0,
+                            0.0,
+                            30539.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "type": 16,
+                        "ID": 2,
+                        "Name": "music_pitch",
+                        "Pos_x": -101.5999755859375,
+                        "Pos_y": -253.39999389648438,
+                        "Size_x": 175.0,
+                        "Size_y": 110.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 0,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 1,
+                                "data_type": 1,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 4,
+                                        "connected_node_socket_id": 2
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": [
+                            0.0,
+                            2.0,
+                            1.0,
+                            0.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "type": 13,
+                        "ID": 4,
+                        "Name": "Pitch",
+                        "Pos_x": 131.1500244140625,
+                        "Pos_y": -62.600006103515628,
+                        "Size_x": 250.0,
+                        "Size_y": 100.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 2,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 0,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 1,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "SocketID": 1,
+                                "connection_type": 1,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 1,
+                                        "connected_node_id": 0,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "SocketID": 2,
+                                "connection_type": 0,
+                                "data_type": 1,
+                                "links": [
+                                    {
+                                        "my_socket_id": 2,
+                                        "connected_node_id": 2,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": [
+                            0.0
+                        ]
+                    }
+                ],
+                "graphLevels_info": []
+            },
+            {
+                "tagname": "step",
+                "is3Dtag": false,
+                "Min3DDistance": 1.0,
+                "Max3DDistance": 2.0,
+                "roll_off_factor": 1.0,
+                "attenuationType": 0,
+                "distance_delay": false,
+                "doppler_active": false,
+                "doppler_factor": 0.0,
+                "isLoopable": false,
+                "channel_id": 0,
+                "levelName": "Root",
+                "associated_ID": -1,
+                "gids": 9,
+                "graphNodes_info": [
+                    {
+                        "type": 18,
+                        "ID": 0,
+                        "Name": "Output",
+                        "Pos_x": 437.300048828125,
+                        "Pos_y": -103.09993743896485,
+                        "Size_x": 100.0,
+                        "Size_y": 50.0,
+                        "can_be_deleted": false,
+                        "inputsCount": 1,
+                        "outputsCount": 0,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 0,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 9,
+                                        "connected_node_socket_id": 1
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": []
+                    },
+                    {
+                        "type": 1,
+                        "ID": 6,
+                        "Name": "Audio Container",
+                        "Pos_x": -200.19998168945313,
+                        "Pos_y": -103.99999237060547,
+                        "Size_x": 200.0,
+                        "Size_y": 100.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 0,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 1,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 9,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": [
+                            0.0,
+                            0.0,
+                            14496.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "type": 16,
+                        "ID": 8,
+                        "Name": "pitch_pasos",
+                        "Pos_x": 45.6500244140625,
+                        "Pos_y": -254.3499755859375,
+                        "Size_x": 175.0,
+                        "Size_y": 110.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 0,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 1,
+                                "data_type": 1,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 9,
+                                        "connected_node_socket_id": 2
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": [
+                            0.0,
+                            2.0,
+                            1.0,
+                            0.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "type": 13,
+                        "ID": 9,
+                        "Name": "Pitch",
+                        "Pos_x": 196.050048828125,
+                        "Pos_y": -35.5499267578125,
+                        "Size_x": 250.0,
+                        "Size_y": 100.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 2,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 0,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 6,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "SocketID": 1,
+                                "connection_type": 1,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 1,
+                                        "connected_node_id": 0,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "SocketID": 2,
+                                "connection_type": 0,
+                                "data_type": 1,
+                                "links": [
+                                    {
+                                        "my_socket_id": 2,
+                                        "connected_node_id": 8,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": [
+                            0.0
+                        ]
+                    }
+                ],
+                "graphLevels_info": []
+            },
+            {
+                "tagname": "pasos",
+                "is3Dtag": false,
+                "Min3DDistance": 1.0,
+                "Max3DDistance": 2.0,
+                "roll_off_factor": 1.0,
+                "attenuationType": 0,
+                "distance_delay": false,
+                "doppler_active": false,
+                "doppler_factor": 0.0,
+                "isLoopable": false,
+                "channel_id": 0,
+                "levelName": "Root",
+                "associated_ID": -1,
+                "gids": 8,
+                "graphNodes_info": [
+                    {
+                        "type": 18,
+                        "ID": 0,
+                        "Name": "Output",
+                        "Pos_x": 583.7000122070313,
+                        "Pos_y": -51.899986267089847,
+                        "Size_x": 100.0,
+                        "Size_y": 50.0,
+                        "can_be_deleted": false,
+                        "inputsCount": 1,
+                        "outputsCount": 0,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 0,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 6,
+                                        "connected_node_socket_id": 1
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": []
+                    },
+                    {
+                        "type": 1,
+                        "ID": 1,
+                        "Name": "Audio Container",
+                        "Pos_x": -249.99998474121095,
+                        "Pos_y": -267.79998779296877,
+                        "Size_x": 200.0,
+                        "Size_y": 100.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 0,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 1,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 4,
+                                        "connected_node_socket_id": 2
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": [
+                            0.0,
+                            0.0,
+                            14483.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "type": 1,
+                        "ID": 2,
+                        "Name": "Audio Container",
+                        "Pos_x": -250.00003051757813,
+                        "Pos_y": -48.5999755859375,
+                        "Size_x": 200.0,
+                        "Size_y": 100.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 0,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 1,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 4,
+                                        "connected_node_socket_id": 3
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": [
+                            0.0,
+                            0.0,
+                            20716.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "type": 1,
+                        "ID": 3,
+                        "Name": "Audio Container",
+                        "Pos_x": -246.79989624023438,
+                        "Pos_y": 147.3999481201172,
+                        "Size_x": 200.0,
+                        "Size_y": 100.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 0,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 1,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 4,
+                                        "connected_node_socket_id": 4
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": [
+                            0.0,
+                            0.0,
+                            16246.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "type": 20,
+                        "ID": 4,
+                        "Name": "Selector",
+                        "Pos_x": 199.5999755859375,
+                        "Pos_y": -49.39996337890625,
+                        "Size_x": 200.0,
+                        "Size_y": 100.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 4,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 0,
+                                "data_type": 1,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 7,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "SocketID": 3,
+                                "connection_type": 1,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 3,
+                                        "connected_node_id": 6,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "SocketID": 1,
+                                "connection_type": 0,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 1,
+                                        "connected_node_id": 1,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "SocketID": 2,
+                                "connection_type": 0,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 2,
+                                        "connected_node_id": 2,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "SocketID": 4,
+                                "connection_type": 0,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 4,
+                                        "connected_node_id": 3,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": []
+                    },
+                    {
+                        "type": 13,
+                        "ID": 6,
+                        "Name": "Pitch",
+                        "Pos_x": 355.59991455078127,
+                        "Pos_y": -10.199981689453125,
+                        "Size_x": 250.0,
+                        "Size_y": 100.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 2,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 0,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 4,
+                                        "connected_node_socket_id": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "SocketID": 1,
+                                "connection_type": 1,
+                                "data_type": 0,
+                                "links": [
+                                    {
+                                        "my_socket_id": 1,
+                                        "connected_node_id": 0,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "SocketID": 2,
+                                "connection_type": 0,
+                                "data_type": 1,
+                                "links": [
+                                    {
+                                        "my_socket_id": 2,
+                                        "connected_node_id": 8,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": [
+                            0.0
+                        ]
+                    },
+                    {
+                        "type": 16,
+                        "ID": 7,
+                        "Name": "superficie",
+                        "Pos_x": 9.150036811828614,
+                        "Pos_y": -344.6000061035156,
+                        "Size_x": 175.0,
+                        "Size_y": 110.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 0,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 1,
+                                "data_type": 1,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 4,
+                                        "connected_node_socket_id": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": [
+                            0.0,
+                            2.0,
+                            1.0,
+                            0.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "type": 16,
+                        "ID": 8,
+                        "Name": "pitch_pasos",
+                        "Pos_x": 247.9500274658203,
+                        "Pos_y": -277.6000061035156,
+                        "Size_x": 175.0,
+                        "Size_y": 110.0,
+                        "can_be_deleted": true,
+                        "inputsCount": 0,
+                        "outputsCount": 1,
+                        "sockets": [
+                            {
+                                "SocketID": 0,
+                                "connection_type": 1,
+                                "data_type": 1,
+                                "links": [
+                                    {
+                                        "my_socket_id": 0,
+                                        "connected_node_id": 6,
+                                        "connected_node_socket_id": 2
+                                    }
+                                ]
+                            }
+                        ],
+                        "values": [
+                            0.0,
+                            2.0,
+                            1.0,
+                            0.0,
+                            1.0
+                        ]
+                    }
+                ],
+                "graphLevels_info": []
+            }
+        ],
+        "sounbank_files": [
+            {
+                "cereal_class_version": 20191030,
+                "id": 30539,
+                "bankFile": "KSB69533143684479194450DATA.krll",
+                "offsetBytes": 0,
+                "size": 161864
+            },
+            {
+                "id": 4489,
+                "bankFile": "KSB69533143684479194450DATA.krll",
+                "offsetBytes": 161864,
+                "size": 17551
+            },
+            {
+                "id": 20716,
+                "bankFile": "KSB69533143684479194450DATA.krll",
+                "offsetBytes": 179415,
+                "size": 10801
+            },
+            {
+                "id": 14603,
+                "bankFile": "KSB69533143684479194450DATA.krll",
+                "offsetBytes": 190216,
+                "size": 1325244
+            },
+            {
+                "id": 4217,
+                "bankFile": "KSB69533143684479194450DATA.krll",
+                "offsetBytes": 1515460,
+                "size": 278834
+            },
+            {
+                "id": 19233,
+                "bankFile": "KSB69533143684479194450DATA.krll",
+                "offsetBytes": 1794294,
+                "size": 19963
+            },
+            {
+                "id": 11649,
+                "bankFile": "KSB69533143684479194450DATA.krll",
+                "offsetBytes": 1814257,
+                "size": 6646
+            },
+            {
+                "id": 11660,
+                "bankFile": "KSB69533143684479194450DATA.krll",
+                "offsetBytes": 1820903,
+                "size": 6527
+            },
+            {
+                "id": 4407,
+                "bankFile": "KSB69533143684479194450DATA.krll",
+                "offsetBytes": 1827430,
+                "size": 612538
+            },
+            {
+                "id": 16246,
+                "bankFile": "KSB69533143684479194450DATA.krll",
+                "offsetBytes": 2439968,
+                "size": 14827
+            },
+            {
+                "id": 14483,
+                "bankFile": "KSB69533143684479194450DATA.krll",
+                "offsetBytes": 2454795,
+                "size": 8753
+            },
+            {
+                "id": 14496,
+                "bankFile": "KSB69533143684479194450DATA.krll",
+                "offsetBytes": 2463548,
+                "size": 8715
+            },
+            {
+                "id": 11420,
+                "bankFile": "KSB69533143684479194450DATA.krll",
+                "offsetBytes": 2472263,
+                "size": 15184
+            },
+            {
+                "id": 11453,
+                "bankFile": "KSB69533143684479194450DATA.krll",
+                "offsetBytes": 2487447,
+                "size": 14983
+            }
+        ],
+        "variables": [
+            {
+                "cereal_class_version": 20191030,
+                "variable_name": "pitch_pasos",
+                "current_value": 2.0,
+                "type": 0,
+                "source": 0,
+                "content": 0,
+                "range_min": -5.0,
+                "range_max": 5.0,
+                "set_only_on_play": false
+            },
+            {
+                "variable_name": "superficie",
+                "current_value": 2.0,
+                "type": 0,
+                "source": 2,
+                "content": 0,
+                "range_min": 0.0,
+                "range_max": 3.0,
+                "set_only_on_play": false
+            },
+            {
+                "variable_name": "win_loose",
+                "current_value": 0.0,
+                "type": 0,
+                "source": 2,
+                "content": 0,
+                "range_min": 0.0,
+                "range_max": 1.0,
+                "set_only_on_play": true
+            },
+            {
+                "variable_name": "pitch_bugs",
+                "current_value": 1.2000000476837159,
+                "type": 0,
+                "source": 0,
+                "content": 0,
+                "range_min": -5.0,
+                "range_max": 5.0,
+                "set_only_on_play": true
+            },
+            {
+                "variable_name": "music_pitch",
+                "current_value": 0.0,
+                "type": 1,
+                "source": 2,
+                "content": 0,
+                "range_min": 0.0,
+                "range_max": 20.0,
+                "set_only_on_play": false
+            },
+            {
+                "variable_name": "mixer_var",
+                "current_value": 0.6000000238418579,
+                "type": 0,
+                "source": 2,
+                "content": 0,
+                "range_min": 0.0,
+                "range_max": 1.0,
+                "set_only_on_play": false
+            },
+            {
+                "variable_name": "surface",
+                "current_value": 0.0,
+                "type": 0,
+                "source": 2,
+                "content": 0,
+                "range_min": 0.0,
+                "range_max": 3.0,
+                "set_only_on_play": false
+            }
+        ],
+        "channels": [
+            {
+                "cereal_class_version": 20200928,
+                "channel_id": 0,
+                "channel_name": "Master",
+                "parent_id": -1,
+                "volume": 1.0
+            },
+            {
+                "channel_id": 1,
+                "channel_name": "Channel 1",
+                "parent_id": 0,
+                "volume": 0.10000000149011612
+            }
+        ],
+        "engine_configurations": [
+            {
+                "cereal_class_version": 20210113,
+                "platform": 0,
+                "backend": 0,
+                "sample_rate": 0,
+                "buffer_size": 0
+            },
+            {
+                "platform": 1,
+                "backend": 0,
+                "sample_rate": 0,
+                "buffer_size": 0
+            }
+        ],
+        "creation_time": 1647346741
+    }
+}

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>three.js webaudio - sandbox</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<link type="text/css" rel="stylesheet" href="main.css">
+</head>
+
+<body>
+	<audio id="song" preload="auto" style="display: none">
+		<source src="sounds/358232_j_s_song.ogg" type="audio/ogg">
+		<source src="sounds/358232_j_s_song.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="skullbeatz" preload="auto" style="display: none">
+		<source src="sounds/376737_Skullbeatz___Bad_Cat_Maste.ogg" type="audio/ogg">
+		<source src="sounds/376737_Skullbeatz___Bad_Cat_Maste.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="utopia" loop preload="auto" style="display: none">
+		<source src="sounds/Project_Utopia.ogg" type="audio/ogg">
+		<source src="sounds/Project_Utopia.mp3" type="audio/mpeg">
+	</audio>
+	<div id="overlay">
+		<button id="startButton">Play</button>
+	</div>
+	<div id="info">
+		<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> webaudio - sandbox<br />
+		music by <a href="https://krilloud.com/" target="_blank" rel="noopener">Krilloud (web plugin)</a><br /><br />
+		navigate with WASD / arrows / mouse
+	</div>
+
+	<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+
+
+	<script type="importmap">
+			{
+				"imports": {
+					"three": "../build/three.module.js"
+				}
+			}
+		</script>
+
+	<script src="krill/krilloud.js"></script>
+	<script src="krill/sdk.js"></script>
+
+	<script type="module">
+
+		import * as THREE from 'three';
+
+		import { GUI } from './jsm/libs/lil-gui.module.min.js';
+
+		import { FirstPersonControls } from './jsm/controls/FirstPersonControls.js';
+
+		let camera, controls, scene, renderer, light;
+
+		let material1, material2, material3;
+
+		let analyser1, analyser2, analyser3;
+
+		let spheres = []
+
+		const clock = new THREE.Clock();
+
+		let moveBlueSphereOn = false
+		let moveRedSphereOn = false
+		let moveYellowSphereOn = false
+
+		const startButton = document.getElementById('startButton');
+		startButton.addEventListener('click', init);
+
+		async function init() {
+
+			const overlay = document.getElementById('overlay');
+			overlay.remove();
+
+			camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 10000);
+			camera.position.set(0, 25, 0);
+
+			const listener = new THREE.AudioListener();
+			camera.add(listener);
+
+			scene = new THREE.Scene();
+			scene.fog = new THREE.FogExp2(0x000000, 0.0025);
+
+			light = new THREE.DirectionalLight(0xffffff);
+			light.position.set(0, 0.5, 1).normalize();
+			scene.add(light);
+
+			const sphere = new THREE.SphereGeometry(20, 32, 16);
+
+			material1 = new THREE.MeshPhongMaterial({ color: 0xffaa00, flatShading: true, shininess: 0 });
+			material2 = new THREE.MeshPhongMaterial({ color: 0xff2200, flatShading: true, shininess: 0 });
+			material3 = new THREE.MeshPhongMaterial({ color: 0x6622aa, flatShading: true, shininess: 0 });
+
+
+			/* Krilloud initialitazion */
+			const path = "krill/";
+			const relativeWebPath = "krill/";
+			await krilloudSDK.start(path, relativeWebPath);
+
+			var tagsToLoad = [
+				{ names: "drums", objectId: 1 },
+				{ names: "bass", objectId: 2 },
+				{ names: "lead", objectId: 3 },
+				{ names: "Ambient", objectId: 4 },
+			];
+
+			krilloudSDK.load(tagsToLoad);
+
+			var lookAtVector = new THREE.Vector3(0, 0, -1);
+			lookAtVector.applyQuaternion(camera.quaternion)
+
+			let lookX = Number(lookAtVector.x).toFixed(1)
+			var lookY = Number(lookAtVector.y).toFixed(1)
+			var lookZ = Number(lookAtVector.z).toFixed(1)
+
+			krilloudSDK.updateListenerPosition(camera.position.x, camera.position.y, camera.position.z, lookX, lookY, lookZ, 0, -1, 0, 0, 0, 0);
+
+			// Mesh 1
+			let mesh1 = new THREE.Mesh(sphere, material1);
+			mesh1.position.set(- 250, 30, 0);
+
+			krilloudSDK.updateObjectPosition(1, -250, 30, 0, 0, 0, 0)
+			krilloudSDK.play("drums", 1);
+
+			spheres.push(mesh1)
+			scene.add(mesh1);
+
+
+			// Mesh 2
+			let mesh2 = new THREE.Mesh(sphere, material2);
+			mesh2.position.set(250, 30, 0);
+
+
+			krilloudSDK.updateObjectPosition(2, 250, 30, 0, 0, 0, 0)
+			krilloudSDK.play("bass", 2);
+
+			spheres.push(mesh2)
+			scene.add(mesh2);
+
+			// Mesh 3
+			let mesh3 = new THREE.Mesh(sphere, material3);
+			mesh3.position.set(0, 30, - 250);
+
+
+			krilloudSDK.updateObjectPosition(3, 0, 30, -250, 0, 0, 0)
+			krilloudSDK.play("lead", 3);
+
+			spheres.push(mesh3)
+			scene.add(mesh3);
+
+			// global ambient audio
+
+			krilloudSDK.play("Ambient", 4);
+
+			// Ground
+
+			const helper = new THREE.GridHelper(1000, 10, 0x444444, 0x444444);
+			helper.position.y = 0.1;
+			scene.add(helper);
+
+
+			const SoundControls = function () {
+				this.master = 1.0;
+				this.yellowSphere = 1.0;
+				this.redSphere = 1.0;
+				this.blueSphere = 1.0;
+				this.Ambient = 1.0;
+			};
+
+			const GeneratorControls = function () {
+
+				this.moveBlueSphere = false
+				this.moveRedSphere = false
+				this.moveYellowSphere = false
+			};
+
+			const gui = new GUI();
+			const soundControls = new SoundControls();
+			const generatorControls = new GeneratorControls();
+			const volumeFolder = gui.addFolder('sound volume');
+
+
+			const generatorFolder = gui.addFolder( 'sound generator' );
+
+			volumeFolder.add(soundControls, 'master').min(0.0).max(1.0).step(0.01).onChange(function () {
+
+				krilloudSDK.changeChannelVolumeByName("Master", soundControls.master)
+
+			});
+			volumeFolder.add(soundControls, 'yellowSphere').min(0.0).max(1.0).step(0.01).onChange(function () {
+
+				krilloudSDK.changeChannelVolumeByName("drums", soundControls.yellowSphere)
+
+			});
+			volumeFolder.add(soundControls, 'redSphere').min(0.0).max(1.0).step(0.01).onChange(function () {
+
+				krilloudSDK.changeChannelVolumeByName("bass", soundControls.redSphere)
+
+			});
+
+			volumeFolder.add(soundControls, 'blueSphere').min(0.0).max(1.0).step(0.01).onChange(function () {
+
+				krilloudSDK.changeChannelVolumeByName("lead", soundControls.blueSphere)
+
+			});
+			volumeFolder.add(soundControls, 'Ambient').min(0.0).max(1.0).step(0.01).onChange(function () {
+
+				krilloudSDK.changeChannelVolumeByName("ambient", soundControls.Ambient)
+
+			});
+			volumeFolder.open();
+
+			generatorFolder.add( generatorControls, 'moveBlueSphere' ).onChange( function () {
+				if(generatorControls.moveBlueSphere) {
+					moveBlueSphereOn = true
+				} else {
+					moveBlueSphereOn = false
+				}
+			});
+
+			generatorFolder.add( generatorControls, 'moveRedSphere' ).onChange( function () {
+				if(generatorControls.moveRedSphere) {
+					moveRedSphereOn = true
+				} else {
+					moveRedSphereOn = false
+				}
+			});
+
+			generatorFolder.add( generatorControls, 'moveYellowSphere' ).onChange( function () {
+				if(generatorControls.moveYellowSphere) {
+					moveYellowSphereOn = true
+				} else {
+					moveYellowSphereOn = false
+				}
+			});
+
+			renderer = new THREE.WebGLRenderer({ antialias: true });
+			renderer.setPixelRatio(window.devicePixelRatio);
+			renderer.setSize(window.innerWidth, window.innerHeight);
+			document.body.appendChild(renderer.domElement);
+
+
+
+			controls = new FirstPersonControls(camera, renderer.domElement);
+
+
+			controls.movementSpeed = 70;
+			controls.lookSpeed = 0.05;
+			controls.noFly = true;
+			controls.lookVertical = false;
+			controls.moveBlueSphere = true
+
+			window.addEventListener('resize', onWindowResize);
+
+			animate();
+
+		}
+
+		function onWindowResize() {
+
+			camera.aspect = window.innerWidth / window.innerHeight;
+
+			camera.updateProjectionMatrix();
+
+			renderer.setSize(window.innerWidth, window.innerHeight);
+
+			controls.handleResize();
+
+		}
+
+		function animate() {
+			requestAnimationFrame(animate);
+			render();
+
+		}
+
+		function render() {
+			
+			const delta = clock.getDelta();
+			
+			controls.update(delta);
+			
+			var lookAtVector = new THREE.Vector3(0, 0, -1);
+			lookAtVector.applyQuaternion(camera.quaternion)
+
+			let lookX = Number(lookAtVector.x).toFixed(1)
+			var lookY = Number(lookAtVector.y).toFixed(1)
+			var lookZ = Number(lookAtVector.z).toFixed(1)
+
+
+			krilloudSDK.updateListenerPosition(camera.position.x, camera.position.y, camera.position.z, lookX, lookY, lookZ, 0, -1, 0, 0, 0, 0);
+
+			if(moveBlueSphereOn) {	
+				let sphere = spheres[2]
+				moveSphere(sphere, 3);
+			}
+		
+			if(moveRedSphereOn) {	
+				let sphere = spheres[1]
+				moveSphere(sphere, 2);
+			}
+
+			if(moveYellowSphereOn) {	
+				let sphere = spheres[0]
+				moveSphere(sphere, 1);
+			}
+						
+			renderer.render(scene, camera);
+		}
+
+		var speed = 2.0
+		function moveSphere(sphere, objectId) {
+
+			let xAxis = parseInt(sphere.position.x)
+			sphere.position.x -= speed;
+			krilloudSDK.updateObjectPosition(objectId, sphere.position.x, sphere.position.y, sphere.position.z, 0, 0, 0)
+			console.log('SPEED', speed)
+					
+			if(xAxis.toFixed(0) < -250){
+				speed = -2.0
+				sphere.position.x -= speed
+				krilloudSDK.updateObjectPosition(objectId, sphere.position.x, sphere.position.y, sphere.position.z, 0, 0, 0)
+			} 
+			if(xAxis.toFixed(0) > 250){
+				speed = 2.0
+				sphere.position.x -= speed
+				krilloudSDK.updateObjectPosition(objectId, sphere.position.x, sphere.position.y, sphere.position.z, 0, 0, 0)
+			} 
+		}
+
+	</script>
+
+</body>
+
+</html>

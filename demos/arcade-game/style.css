@@ -1,0 +1,51 @@
+body {
+    text-align: center;
+}
+canvas{
+    padding:0;
+    margin-top:-40px;
+    max-height:600px;
+}
+p{
+	font-size:25px;
+	color: #189AB4;
+	font-family: Candal;
+	font-weight: bold;
+  padding:0;
+}
+
+h3{
+  display:none;
+  color: #189AB4;
+  font-family: Candal;
+  font-size: 50px;
+  margin-top: -5vh;
+  font-weight: bold;
+}
+
+.section-start {
+  width: 10%;
+  padding-left: 45%;
+  padding-right: 45%;
+}
+
+.ui-page-theme-a .ui-btn, html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html head+body .ui-btn.ui-btn-a, .ui-page-theme-a .ui-btn:visited, html .ui-bar-a .ui-btn:visited, html .ui-body-a .ui-btn:visited, html body .ui-group-theme-a .ui-btn:visited, html head+body .ui-btn.ui-btn-a:visited {
+  background-color: #B1D4E0;
+  color: #fff
+}
+
+.ui-btn:hover {
+  background-color: #189AB4 !important;
+  color: #fff !important;
+}
+
+/* Extra small devices (phones, up to 480px) */
+@media screen and (max-width: 767px) {
+	
+	canvas{
+		max-width: 360px;
+		min-height: 450px;
+
+	}
+
+}
